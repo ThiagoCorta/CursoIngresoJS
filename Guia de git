@@ -4,4 +4,5 @@ CTRL + Z Vuelve para atras
 CTRL + Y Vuelve de la vuelta para atras
 
 1 git clone https://github.com/ThiagoCorta/CursoIngresoJS.git
-2 git commit -m "mensaje"
+2 git add .
+3 git commit -m "mensaje"
