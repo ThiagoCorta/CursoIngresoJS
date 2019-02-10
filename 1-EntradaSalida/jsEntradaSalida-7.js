@@ -6,44 +6,35 @@ function sumar()
 {	
 	var numero1;
 	var numero2;
- 	var resultado;
- 	var suma;
+	var resultado;
 
- 	document.getElementById('numeroUno').value=numero1;
+	numero1=document.getElementById('numeroUno').value;
+	numero2=document.getElementById('numeroDos').value;
 
-	document.getElementById('numeroDos').value=numero2;
+	numero1=parseInt(numero1);
+	numero2=parseInt(numero2);
 
-	var numero1 = parseInt("500");
+	resultado=numero1+numero2;
 
-	var numero2 = parseInt("250");
-
-	var resultado = numero1 + numero2 
-
-	var suma = "La suma es "
-	alert(suma.concat(resultado))
+	alert("La suma es: " + resultado)
 }
 
 function restar()
 {
-	var numero1;
-	var numero2;
- 	var resultado;
- 	var resta;
+	
+var numero1;
+var numero2;
+var resultado;
 
- 	document.getElementById('numeroUno').value=numero1;
+numero1=document.getElementById('numeroUno').value;
+numero2=document.getElementById('numeroDos').value;
 
-	document.getElementById('numeroDos').value=numero2;
+numero1=parseInt(numero1);
+numero2=parseInt(numero2);
 
-	var numero1 = parseInt("800");
+resultado=numero1-numero2;
 
-	var numero2 = parseInt("50");
-
-	var resultado = numero1 - numero2;
-
-	var resta = "La resta es "
-	alert(resta.concat(resultado))
-
-
+alert("La resta es: " + resultado)
 
 
 }
@@ -52,41 +43,33 @@ function multiplicar()
 { 
 	var numero1;
 	var numero2;
- 	var resultado;
- 	var multiplicasion;
+	var resultado;
 
- 	document.getElementById('numeroUno').value=numero1;
+	numero1=document.getElementById('numeroUno').value;
+	numero2=document.getElementById('numeroDos').value;
 
-	document.getElementById('numeroDos').value=numero2;
+	numero1=parseInt(numero1);
+	numero2=parseInt(numero2);
 
-	var numero1 = parseInt("10");
+	resultado=numero1*numero2;
 
-	var numero2 = parseInt("75");
-
-	var resultado = numero1 * numero2;
-
-	var multiplicasion = "La multiplicasion es "
-	alert(multiplicasion.concat(resultado))
+	alert("La multiplicacion es: " + resultado)
 }
 
 function dividir()
 {
 	var numero1;
 	var numero2;
- 	var resultado;
- 	var division;
+	var resultado;
 
- 	document.getElementById('numeroUno').value=numero1;
+	numero1=document.getElementById('numeroUno').value;
+	numero2=document.getElementById('numeroDos').value;
 
-	document.getElementById('numeroDos').value=numero2;
+	numero1=parseInt(numero1);
+	numero2=parseInt(numero2);
 
-	var numero1 = parseInt("3750");
+	resultado = numero1 / numero2;
 
-	var numero2 = parseInt("5");
-
-	var resultado = numero1 / numero2;
-
-	var division = "La division es "
-	alert(division.concat(resultado))
+	alert("La division es: " + resultado )
 }
 

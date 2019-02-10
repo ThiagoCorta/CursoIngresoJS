@@ -6,16 +6,10 @@ function mostrar()
 {
 	var nombre;
 
-	nombre=prompt("Ingresa tu nombre");
-	//nombre = prompt ("ingresa tu nombre", "nombre")
-	// elnommre.value=nombre; tambien funciona y es otra forma de decirlo.
-	//elNombre.value=nombre;
-    document.getElementById('elNombre').value=nombre;
+	nombre=prompt("Decime tu nombre");
+
+	document.getElementById('elNombre').value=nombre;
 
 
-	//elNombre.getElementById("nombre");
-	//getElementById("nombre")
-	
-	//alert (nombre);
 }
 
