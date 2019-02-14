@@ -9,7 +9,7 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
-var numero1;
+var numero1;	
 
 function comenzar()
 {
@@ -18,8 +18,8 @@ function comenzar()
 		//alert(numeroSecreto );
 
 	numeroSecreto=Math.floor((Math.random() * 100) + 1);
-	
-	alert(numeroSecreto);
+	alert("Comienza el juego");
+	contadorIntentos=0
 
 
 }
@@ -28,21 +28,28 @@ function verificar()
 {
 	
 	numero1=document.getElementById('numero').value;
+
+	if (numero1<numeroSecreto) {
+
+		alert("Estas por debajo del numero secreto.");
+		contadorIntentos++}
+
+	else if (numero1>numeroSecreto) {
+
+		alert("Estas por encima del numero secreto.")
+		contadorIntentos++;}
+
+	else if (numero1==numeroSecreto) {
+
+		alert("Felicidades usted es un ganador y en solo " + contadorIntentos + " intentos." )
+		contadorIntentos++;} 
+
 	
-	numero1=parseInt(numero1);
-	contadorIntentos=parseInt(contadorIntentos);
-
-	contadorIntentos=0
-	contadorIntentos=contadorIntentos+document.getElementById('intentos').value;
+	document.getElementById('intentos').value=contadorIntentos;
 
 }
 
-{
- 
 
 
 
 
-
-
-}
