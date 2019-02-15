@@ -4,8 +4,7 @@ function mostrar()
 	var edad1;
 
 	edad1=document.getElementById('edad').value;
-
-	//edad1=parseInt(edad1)
+	edad1=parseInt(edad1);
 
 	if (edad1>17) 
 	{

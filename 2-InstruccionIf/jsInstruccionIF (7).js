@@ -4,18 +4,22 @@ function mostrar()
 	
 
 	var edad1;
-	var soltero;
+	var ecivil;
 
 	edad1=document.getElementById('edad').value;
+	ecivil=document.getElementById('estadoCivil').value;
+	
 
-	edad1=parseInt(edad1);
+	if (edad1<18 && ecivil != "Soltero") 
 
-	if (edad1<18 && != soltero ) {
-		alert("Sos muy chico para no ser ser soltero")
+	{
+		alert("Sos muy chico para NO ser soltero");
+	}
+
+
 
 	
 
-	
 
 
 }
