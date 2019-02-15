@@ -10,7 +10,7 @@ function mostrar()
 
 	edad1=parseInt(edad1);
 
-	if (edad1<18 & != soltero ) {
+	if (edad1<18 && != soltero ) {
 		alert("Sos muy chico para no ser ser soltero")
 
 	

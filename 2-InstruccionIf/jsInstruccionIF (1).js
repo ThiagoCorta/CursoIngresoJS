@@ -7,19 +7,20 @@ function mostrar()
 
 	edad1=document.getElementById('edad').value;
 
-	edad1=parseInt(edad1);
+	//edad1=parseInt(edad1);
 
 
 	
 	if (edad1==15) {
 
-		alert("niña bonita")} 
+		alert("niña bonita")
+	} 
 
-		else {
+		//else {
 
-			alert("Su edad es : " + edad1);
+			//alert("Su edad es : " + edad1);
 
-		}
+		
 
 
 
