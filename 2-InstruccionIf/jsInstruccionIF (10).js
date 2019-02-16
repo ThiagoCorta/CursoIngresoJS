@@ -6,25 +6,26 @@ function mostrar()
 
 	numeroSecreto=Math.floor((Math.random() * 10) + 1);
 
-	if (numeroSecreto<11 && numeroSecreto>8)
+	if (numeroSecreto>8)
 	{
-		mensaje="EXCELENTE"
+		mensaje="EXCELENTE. Su nota es: "+numeroSecreto;
 	}
 
 	else 
 	{
-		if (numeroSecreto<9 && numeroSecreto>3)
+		if (numeroSecreto>3)
 		{
-			mensaje="APROBO"
+			mensaje="APROBO. Su nota es: "+numeroSecreto;
 		}
 
-		if (numeroSecreto<4) 
+		else //(numeroSecreto<4) 
 		{
-			mensaje="Vamos, la proxima se puede"
+			mensaje="Vamos, la proxima se puede. Su nota es: "+numeroSecreto;
 		}
 
 	}	
 
-	alert("Su nota es: "+numeroSecreto+ " " + mensaje);
+	alert(mensaje);
+	console.log(numeroSecreto);
 
 }//FIN DE LA FUNCIÓN

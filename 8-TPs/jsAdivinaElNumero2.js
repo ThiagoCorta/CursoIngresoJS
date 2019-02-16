@@ -24,68 +24,52 @@ function comenzar()
 
 function verificar()
 {
+	numeroIngresado=document.getElementById('numero').value;
+	contadorIntentos=contadorIntentos+1;
 	
-	numero1=document.getElementById('numero').value;
 
-
-	if (numero1==numeroSecreto && contadorIntentos>0 || contadorIntentos<2) {
-
-		alert("Usted es un Psíquico”");
-		contadorIntentos++;
-	}
-
-	else(numero1==numeroSecreto && contadorIntentos>1 || contadorIntentos<3)
-		
-		{
-			alert("Excelente percepción");
-			contadorIntentos++;
-
-		}
-
-	else (numero1==numeroSecreto && contadorIntentos>2 || contadorIntentos<4)
-		{
-			alert("Esto es suerte");
-			contadorIntentos++;
-		}
-
-	else (numero1==numeroSecreto && contadorIntentos>3 || contadorIntentos<5)
-		{
-			alert("Excelente tecnica");
-			contadorIntentos++;
-		}
-
-	else (numero1==numeroSecreto && contadorIntentos>4 || contadorIntentos<6)
-		{
-			alert("Usted esta en la media");
-			contadorIntentos++;
-			;
-
-	else (numero1==numeroSecreto && contadorIntentos>5 || contadorIntentos<11)
-		{
-			alert("Falta tecnica");
-			contadorIntentos++;
-		}
-
-	else (numero1==numeroSecreto && contadorIntentos>10)
-		{
-			alert("Afortunado en el amor");
-			contadorIntentos++;
-		}
-
-
-	if (numero1<numeroSecreto) 
-	{
-
-		alert("Usted esta por debajo del numero secreto.");
-		contadorIntentos++;
-
-	}
-	else (numero1>numeroSecreto)
+	if  (numeroIngresado==numeroSecreto && contadorIntentos<2) 
 	{
 		
-		alert("Usted esta por encima del numero secreto");
-		contadorIntentos++;
+		mensaje=("Felicidades usted es un psiquico ");
+			
 	}
-	
+
+	else
+	{	
+		mensaje=("Felicudades usted tiene una Excelente percepción ");
+
+	}	
+
+		if (numeroIngresado==numeroSecreto && contadorIntentos<4)
+		{
+			mensaje=("Esto es suerte");
+		}
+
+		else 
+		{
+			mensaje=("Excelente Tecnica");
+		}
+
+
+			if (numeroIngresado==numeroSecreto && contadorIntentos<6)
+			{
+				mensaje=("Usted esta en la media");
+			}
+
+			else 
+			{
+				mensaje=("Falta tecnica");
+			}
+
+				if (numeroIngresado==numeroSecreto && contadorIntentos>10)
+				{
+					mensaje="Afortunado en el amor"
+				}
+
+
 	document.getElementById('intentos').value=contadorIntentos;
+
+	alert(mensaje)
+	
 }

@@ -31,34 +31,53 @@ function verificar()
 {
 	
 	numeroIngresado=document.getElementById('numero').value;
+	contadorIntentos=contadorIntentos+1;
+	
 
-	if (numeroIngresado<numeroSecreto)
+	if  (numeroIngresado==numeroSecreto) 
 	{
-		mensaje=("Estas por debajo del numero secreto.");
-		contadorIntentos++;
+		
+		mensaje=("Felicidades usted es un ganador y en solo " + contadorIntentos + " intentos." )
+			//contadorIntentos++;
+		
+			switch(contadorIntentos)
+			{
+				case 1:
+				mensaje="Sos un psiquico"
+				break;
+
+				case 2:
+				mensaje="Perfecto"
+				break;
+				default:
+			}
+
 	}
+
 
 	else
 	{
 
-		 if (numeroIngresado>numeroSecreto) 
+		if (numeroIngresado>numeroSecreto) 
 		{
 			mensaje=("Estas por encima del numero secreto.")
-			contadorIntentos++;
+			//contadorIntentos++;
 		}
 
-		if (numeroIngresado==numeroSecreto) 
+		else //(numeroIngresado<numeroSecreto)
 		{
+			mensaje=("Estas por debajo del numero secreto.");
+			//contadorIntentos++; esta bien igual.
 
-			mensaje=("Felicidades usted es un ganador y en solo " + contadorIntentos + " intentos." )
-			contadorIntentos++;
+			
 		} 
 	}
 
 	
 	document.getElementById('intentos').value=contadorIntentos;
 
-	alert(mensaje)
+	alert(mensaje);
+	console.log(numeroSecreto);
 }
 
 
