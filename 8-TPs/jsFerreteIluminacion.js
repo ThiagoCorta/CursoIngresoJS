@@ -10,53 +10,99 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	var cantidad;
- 	var lamparitas;
- 	var descuento;
- 	var precioBruto;
  	var precio;
- 	var precioFinal;
+ 	var cantidad;
+ 	var total;
+ 	var descuento;
+ 	var porcen;
+ 	var marca1;
+ 	var importefinal;
+
+ 
 
  	cantidad=document.getElementById('Cantidad').value;
+ 	marca1=document.getElementById('Marca').value;
+
+ 	cantidad=parseInt(cantidad);
  	precio=35;
-	precioBruto=cantidad+precio;
+ 	porcen=1;
 
-	porcen=100;
 
- 	if (cantidad>5) 
- 	{		
- 		//descuento=precio * 50 / 100;
+ 	if(cantidad>=6)
+ 	{
  		porcen=50;
  	}
-	else 
-	{
-		if (cantidad==5)
+ 	else
+ 	{
+ 		if(cantidad==5)
 		{
-				if(marca=="ArgentinaLuz")
-				{					
-					porcen=60;					
-				}
-				else
-				{ 						
-					porcen=70;	
-				}
-					
-		}else
+			switch(marca1)
+			{
+				case "ArgentinaLuz":
+					porcen=40;
+				break;
+
+				default:
+					porcen=30;
+				break;
+			}
+		}
+		else
 		{
 			if(cantidad==4)
 			{
-					descuento=precio * 40 / 100;	
-			}else
+				switch(marca1)
+				{
+					case "ArgentinaLuz":
+						
+					case "FelipeLamparas":
+						porcen=25;
+						break;
+
+					default:
+						porcen=20
+						break;
+				}
+			}
+			else
 			{
 				if(cantidad==3)
 				{
-						descuento=precio * 40 / 100;	
+					switch(marca1)
+					{
+						case "ArgentinaLuz":
+						porcen=15;
+						break;
+
+						case "FelipeLamparas":
+						porcen=10;
+						break;
+
+						default:
+						porcen=5
+						break;
+					}
 				}
 			}
 		}
 
- 	}
-	descuento=precio * porcen/ 100;
- 	precioFinal=precio-descuento;	
- 	alert(precioFinal);
+
+  	}
+ 
+
+ 	total=precio*cantidad;
+ 	descuento=total*porcen/100;
+ 	importefinal=total-descuento;
+
+ 	if(importefinal>120)
+	{
+		porcen=-10;
+		alert("Usted pago IIBB " + importefinal + " Siendo "+ descuento +" el impuesto que pago.");
+	}
+ 	
+
+
+ 	document.getElementById('precioDescuento').value=importefinal;
+
+
 }
