@@ -56,27 +56,31 @@ function mostrar()
 
 			if(numeros>0)
 			{
-				acumuladorPositivo=acumuladorPositivo+1;
+				acumuladorPositivo=acumuladorPositivo+numeros;
 				contadorpositivo=contadorpositivo+1;
-				sumaP=sumaP+numeros;
+				
 			}
 			else
 			{
-				acumuladorNegativo=acumuladorNegativo+1;
+				acumuladorNegativo=acumuladorNegativo+numeros;
 				contadornegativo=contadornegativo+1
-				sumaN=sumaN+numeros;
+				
 			}
 
 				if(numeros==0)
 				{
 					contadorceros=contadorceros+1;
 				}
-
+				else
+				{
 					if(numeros%2==0)
 					{
 						contadorPares=contadorPares+1;
 					}
 
+				}
+
+					
 					cantidadP=contadorpositivo;
 					cantidadN=contadornegativo;
 
