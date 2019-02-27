@@ -2,22 +2,20 @@
 function mostrar()
 {
 
-
-	var base;
-	var altura;
-	var suma;
-	var resultado;
-
-	base=prompt("Ingrese la base del rectangulo en CM");
-	altura=prompt("Ingrese la altura del rectangulo en CM");
-
-	base=parseInt(base);
-	altura=parseInt(altura);
-
-	suma=base+altura;
-	resultado= 2 * suma; 
+	var ancho
+	var largo
+	var perimetro
 
 
-	alert("El perimetro del rectango es: " + resultado + " cm2")
+	ancho=prompt("Ingresar ancho de un rectangulo");
+	largo= prompt("Ingresar largo de un rectangulo");
+
+	ancho=parseInt(ancho);
+	largo=parseInt(largo);
+
+	perimetro=2*ancho+largo;
+
+	alert("El perimetro del rectangulo es :" + perimetro)
+	
 
 }

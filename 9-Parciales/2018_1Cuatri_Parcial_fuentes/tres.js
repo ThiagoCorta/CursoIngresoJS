@@ -2,18 +2,21 @@ function mostrar()
 {
 
 	var precio;
-	var porcentaje;
 	var descuento;
-	var preciofinal;
+	var porcentaje;
+	var final;
 
-	precio=prompt("Ingrese el precio de su producto");
-	porcentaje=prompt("Ingrese el descuento de su producto");
+	precio=prompt("Ingresar precio");
+	porcentaje=prompt("Ingresar descuento");
+
+	precio=parseInt(precio);
+	porcentaje=parseInt(porcentaje);
 
 	descuento=precio*porcentaje/100;
+	final=precio-descuento;
 
-	preciofinal=precio - descuento;
+	document.getElementById('elPrecioFinal').value=final;
 
-	document.getElementById('elPrecioFinal').value=preciofinal;
 
 
 }
