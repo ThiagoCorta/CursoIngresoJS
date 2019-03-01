@@ -20,7 +20,8 @@ function mostrar()
 	var acumuladorPromedio;
 	var promedios;
 	var celularesMayor2000;
-	var primeroCelular1000;
+	var marcaMil;
+	var celularUltimoLg;
 
 
 	celularPrecioMayor=0;
@@ -33,6 +34,7 @@ function mostrar()
 	respuesta="si";
 	acumuladorPromedio=0;
 	celularesMayor2000=0;
+	celularUltimoLg+0;
 
 
 	while(respuesta=="si")
@@ -71,16 +73,17 @@ function mostrar()
 
 			if(contadorCelulares==1)
 			{
-				celularPrecioMenor=celularPrecio;
 				celularPrecioMayor=celularPrecio;
 				celularMarcaMayor=celularMarca;
+				celularPantallaMayor=celularTamaño;
+				
+				celularPrecioMenor=celularPrecio;
 				celularMarcaMenor=celularMarca;
 				celularPantallaMenor=celularTamaño;
-				celularPantallaMayor=celularTamaño;
 			}
 			else
 			{
-				if (celularPrecioMayor>celularPrecio)
+				if (celularPrecio>celularPrecioMayor)
 				{
 					celularPrecioMayor=celularPrecio;
 					celularMarcaMayor=celularMarca
@@ -94,14 +97,22 @@ function mostrar()
 				}
 			}
 
-			if(celularPrecio>2000)
-			{
-			celularesMayor2000++;
-			}
-			else
-			{
-				if(celularMarca==)
-			}
+					if(celularPrecio>2000)
+					{
+						celularesMayor2000=celularesMayor2000+1;
+					}
+					else
+					{
+						if(celularPrecio==1000)
+						{
+							marcaMil=celularMarca;
+						}
+					}
+
+							if(celularMarca=="lg")
+							{
+								celularUltimoLg=celularPrecio;
+							}
 
 		}
 
@@ -111,6 +122,9 @@ function mostrar()
 		document.write("Promedio de precios: " + promedio+ "<br>"+
 			"Cantidad de celulares que valen mas de 2000: "+ celularesMayor2000+ "<br>"+
 			"Precio marca y tamaño del mas caro: " + celularPrecioMayor + " " + celularMarcaMayor + " " + celularPantallaMayor+ "<br>"+
-			"Precio marca y tamaño del mas barato: " + celularPrecioMenor+ " " + celularMarcaMenor+ " " + celularPantallaMenor)
+			"Precio marca y tamaño del mas barato: " + celularPrecioMenor+ " " + celularMarcaMenor+ " " + celularPantallaMenor+ "<br>"+
+			"La marca del primer celular ingresado que vale 1000 es : " + marcaMil + "<br>"+
+			"El valor del ultimo celular LG ingresado fue : " + celularUltimoLg+ "<br>"+
+			"La cantidad de celulares ingresados fueron : " + contadorCelulares)
 
 }
