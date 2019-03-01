@@ -65,7 +65,7 @@ function NumerosImpares ()
 	{
 		contador=contador+1;
 		
-		if(contador%2!=0)
+		if(contador%3==0)
 		{
 			console.log("impar" + contador)
 			total=total+1;
