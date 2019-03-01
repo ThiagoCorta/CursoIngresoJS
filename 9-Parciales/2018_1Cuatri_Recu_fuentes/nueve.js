@@ -26,10 +26,6 @@ function mostrar()
 
 	celularPrecioMayor=0;
 	celularPrecioMenor=0;
-	celularPantallaMayor=0;
-	celularPantallaMenor=0;
-	celularMarcaMenor= " "
-	celularMarcaMayor= " "
 	contadorCelulares=0;
 	respuesta="si";
 	acumuladorPromedio=0;
@@ -51,17 +47,17 @@ function mostrar()
 			celularPrecio=parseInt(celularPrecio)
 			acumuladorPromedio=acumuladorPromedio+celularPrecio;
 
-			while(celularPrecio<0 || celularPrecio>9999)
+			while(celularPrecio<0 || celularPrecio>99999)
 			{
 				celularPrecio=prompt("Error, ingresar el precio del celular");
 			}
 
 
-			celularTamaño=prompt("Ingresar el tamaño de tu celular en CM")
+			celularTamaño=prompt("Ingresar el tamaño de tu celular en pulgadas")
 
 			while(celularTamaño<0 || celularTamaño>10)
 			{
-				celularTamaño=prompt("Error, Ingresar el tamaño de tu celular en CM")
+				celularTamaño=prompt("Error, Ingresar el tamaño de tu celular en pulgadas")
 			}
 
 			respuesta=prompt("Si para seguir")
@@ -106,6 +102,7 @@ function mostrar()
 						if(celularPrecio==1000)
 						{
 							marcaMil=celularMarca;
+
 						}
 					}
 
