@@ -1,67 +1,97 @@
 function mostrar()
 {
+	var velocidad;
+	var combustible;
+	var cantidadVelocidades;
+	var acumuladorVelocidades;
+	var acumuladorCombustible;
+	var velocidadMayor;
+	var velocidadMenor;
+	var combustibleMayor;
+	var combustibleMenor;
 	var contador;
-	var notas;
-	var sexo;
-	var acumulador;
-	var promedioT;
-	var maximo;
-	var minimo;
-	var cantidadM;
+	var promedio;
+	var liquidosMayor100;
+	var velocidadAltaSolido;
 
-
+	cantidadVelocidades=5;
 	contador=0;
-	acumulador=0;
+	acumuladorVelocidades=0;
+	acumuladorCombustible=0;
+	liquidosMayor100=0;
+	velocidadAltaSolido=0;
 
-	notas=prompt("ingresa las notas " + contador + "# =");
-	sexo=prompt("Ingresar el sexo de los alumnos F O M"+ contador + "# =")
-	
-	notas=parseInt(notas);
 
-	while(contador<5)
+	while(contador<cantidadVelocidades)
 	{
-		acumulador=acumulador+1;
+		velocidad=prompt("Ingresar velocidad entre 0 y 250KM");
+		velocidad=parseInt(velocidad);
+		
+
+		while(velocidad<0 || velocidad>250)
+		{
+			velocidad=prompt("Error, ingresar velocidad entre 0 y 250KM");
+			velocidad=parseInt(velocidad);
+
+		}
+
 		contador=contador+1;
-		
-		notas=prompt("ingresa las notas " + contador + "# =");
-		sexo=prompt("Ingresar el sexo de los alumnos F O M"+ contador + "# =")
-		
-		
-		if(notas<0 || notas>10)
-		{
-			notas=prompt("ingresa las notas entre 0 y 10");
-			
+		acumuladorVelocidades=acumuladorVelocidades+velocidad;
 
-		}
-		else
-		{
-			if(sexo!="f" && sexo!="m")
-			{
-			sexo=prompt("Ingresa un sexo valido")
-			
-			}
-
-		}
+		combustible=prompt("Ingresar tipo de combustible s (solido) o l (liquido)");
 		
+
+		while(combustible!="s" && combustible!="l")
+		{
+			combustible=prompt("Error, ingresar tipo de combustible s (solido) o l (liquido)");
+		}
+
+		acumuladorCombustible++;
+
+		promedio=acumuladorVelocidades/cantidadVelocidades;
+
 		if(contador==1)
 		{
-			nota=maximo;
-			nota=minimo;
+			velocidadMenor=velocidad;
+			velocidadMayor=velocidad;
+			combustibleMayor=combustible;
+			combustibleMenor=combustible;
+			
+			if(combustible="s")
+			{
+				velocidadAltaSolido=velocidad;
+			}
+
 		}
 		else
 		{
-			if(notas>maximo)
+			if(velocidad>velocidadMayor)
 			{
-			maximo=numero;
-			}
-			if(notas<minimo)
+				velocidadMayor=velocidad;
+				combustibleMayor=combustible;
+				velocidadAltaSolido=velocidad;
+			}	
+			else
 			{
-			minimo=numero+sexo;
+				velocidadmenor=velocidad;
+				combustibleMenor=combustible;
+
 			}
+
 		}
-		promedio=notas/contador;
 
-		alert()
+		if(combustible=="l" && velocidad>100)
+		{
+			liquidosMayor100=liquidosMayor100+1;
+		}
 
-	}
+	
+	}	
+
+	document.write("El promedio de las velocidades totales: " + promedio+ "<br>"+
+					"La velocidad mas baja y su tipo de combustible: " + velocidadmenor+ " " + combustibleMenor+ "<br>"+
+					"La cantidad de combustibles liquidos que su velocidad supera 100: "+ liquidosMayor100+ "<br>"+
+					"La velocidad mas alta de los combustibles solidos : " + velocidadAltaSolido)
+
+
 }
