@@ -6,20 +6,22 @@ function mostrar()
 	var superficieMenor100;
 	var superficieIgual100;
 	var respuesta;
-	var primerPaisSupero100;
+	var contadorSupMayora100;
 	var paisMenorSuperficie;
 	var paisMenorSuperficieNombre;
 	var promedioKmIngresado;
 	var contador;
 	var acumuladorSuperficie;
+	var primerPaisSupero100;
 
 	contador=0;
 	superficieImpar=0;
-	superficieMenor100=0;
 	respuesta="si";
-	superficieIgual100=0;
 	acumuladorSuperficie=0;
-	primerPaisSupero100=0;
+	superficieMenor100=0;
+	superficieIgual100=0;
+	contadorSupMayora100=0;
+	
 
 
 	while(respuesta=="si")
@@ -40,46 +42,56 @@ function mostrar()
 
 		respuesta=prompt("Si para seguir");
 
-		while(respuesta!="si")
-		{
-			break;
-		}
-
-	}
-
-
-	if(superficie%2==1)
-	{
-		superficieImpar=superficieImpar+1;
-	}
+			while(respuesta!="si")
+			{
+				break;
+			}
 	
 	
-		if(superficie<100)
+		if(superficie%2!=0)
 		{
-			superficieMenor100=superficieMenor100+1;
+			superficieImpar=superficieImpar+1;
 		}
-		else
-		{
-			if(superficie==100)
+		
+			if(superficie<100)
 			{
-				superficieIgual100=superficieIgual100+1;
+				
+				superficieMenor100=superficieMenor100+1;
 			}
-		}
-
-		if(contador==1)
-		{
-			paisMenorSuperficie=superficie;
-			paisMenorSuperficieNombre=pais;
-
-		}
-		else
-		{
-			if(superficie<paisMenorSuperficie)
+			else
 			{
-				paisMenorSuperficie=superficie;
-				paisMenorSuperficieNombre=pais;
+				if(superficie==100)
+				{
+					superficieIgual100=superficieIgual100+1;
+					
+				}
+				
+				if(superficie>100 && contadorSupMayora100==0)
+				{
+				contadorSupMayora100=contadorSupMayora100+1;
+				primerPaisSupero100=paises;
+				}
+			
 			}
-		}
+
+					if(contador==1)
+					{
+						paisMenorSuperficie=superficie;
+						paisMenorSuperficieNombre=paises;
+
+					}
+					else
+					{
+						if(paisMenorSuperficie<superficie)
+						{
+							paisMenorSuperficie=superficie;
+							paisMenorSuperficieNombre=paises;
+						}
+					}
+					
+
+	}
+	
 	
 
 	promedioKmIngresado=acumuladorSuperficie/contador;
