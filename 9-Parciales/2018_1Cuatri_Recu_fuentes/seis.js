@@ -87,7 +87,7 @@ f)El precio máximo y el mínimo de todas las gaseosa de menores de 3 litros.
 			}
 			else
 			{
-				if(precioGaseosa>maximoPrecioGaseosa)
+				if(precioGaseosa > maximoPrecioGaseosa)
 				{
 					maximoPrecioGaseosa=precioGaseosa;
 					maximoLitroGaseosa=litrosGaseosa;
@@ -95,9 +95,13 @@ f)El precio máximo y el mínimo de todas las gaseosa de menores de 3 litros.
 				}
 				else
 				{
-					minimoMarcaGaseosa=marcaGaseosa;
-					minimoLitroGaseosa=litrosGaseosa;
-					minimoPrecioGaseosa=precioGaseosa;
+					if(precioGaseosa<minimoPrecioGaseosa)
+					{
+						minimoMarcaGaseosa=marcaGaseosa;
+						minimoLitroGaseosa=litrosGaseosa;
+						minimoPrecioGaseosa=precioGaseosa;
+					}
+					
 				}
 					
 					
@@ -108,7 +112,7 @@ f)El precio máximo y el mínimo de todas las gaseosa de menores de 3 litros.
 			}
 
 
-			if(contador3litros==0)
+			if(contador3litros==0 && litrosGaseosa==3)
 			{
 				precioMinimo3litros=precioGaseosa;
 				precioMaximo3litros=precioGaseosa;
