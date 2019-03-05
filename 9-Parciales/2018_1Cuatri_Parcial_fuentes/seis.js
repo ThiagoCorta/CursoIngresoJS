@@ -28,7 +28,7 @@ function mostrar()
 		case 17:
 		case 18:
 		case 19:
-			mensaje="Es de noche";
+			mensaje="Es de tarde";
 			break;
 
 		case 20:
@@ -41,8 +41,15 @@ function mostrar()
 		case 3:
 		case 4:
 		case 5:
-			mensaje="Es de noche";
+			mensaje="es de noche"
+
+		
+		if(hora<=24)
+		{
+			mensaje="Es de noche a dormir";
 			break;
+		}
+		
 
 		default:
 			mensaje="ingresar horario valido"

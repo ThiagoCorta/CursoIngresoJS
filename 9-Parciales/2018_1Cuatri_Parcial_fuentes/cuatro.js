@@ -31,7 +31,7 @@ function mostrar()
 
 		}
 
-			if(numero1+numero2>=10)
+			if(numero1+numero2>10)
 			{
 				suma=numero1+numero2;
 				mensaje="La suma es " + suma + " y supero el 10";
