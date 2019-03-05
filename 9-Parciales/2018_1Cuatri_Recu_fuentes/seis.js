@@ -112,21 +112,28 @@ f)El precio máximo y el mínimo de todas las gaseosa de menores de 3 litros.
 			}
 
 
-			if(contador3litros==0 && litrosGaseosa==3)
+			if(litrosGaseosa<3)
 			{
-				precioMinimo3litros=precioGaseosa;
-				precioMaximo3litros=precioGaseosa;
-				contador3litros++
-			}
-			else
-			{
-				if(precioGaseosa>precioMaximo3litros)
+				if(contador3litros==0)
 				{
+					precioMinimo3litros=precioGaseosa;
 					precioMaximo3litros=precioGaseosa;
+					contador3litros++
 				}
 				else
 				{
-					precioMinimo3litros=precioGaseosa;
+					if(precioGaseosa>precioMaximo3litros)
+					{
+						precioMaximo3litros=precioGaseosa;
+					}
+					else
+					{
+						if(precioGaseosa<precioMinimo3litros)
+						{
+							precioMinimo3litros=precioGaseosa;
+						}
+						
+					}
 				}
 			}
 
@@ -137,10 +144,10 @@ f)El precio máximo y el mínimo de todas las gaseosa de menores de 3 litros.
 
 
 		document.write("La cantidad de precios pares : " + contadorPares + "<br>"+
-						"La marca, litros y precio del mas barato " + minimoMarcaGaseosa + " cantidad de litros : " + minimoLitroGaseosa+ " precio : " + minimoPrecioGaseosa+ "<br>"+
+						"La marca, litros y precio del mas barato:= " + minimoMarcaGaseosa + " Cantidad de litros:= " + minimoLitroGaseosa+ " Precio:= " + minimoPrecioGaseosa+ "<br>"+
 						"La cantidad de gaseosas q valen menos que 50: " + cantidadGaseosasMenor50+ "<br>"+
 						"El promedio de precios de todas las gaseosas: " + promedio + "<br>" +
-						"El precio maximo y minimo de todas las gaseosas menores a 3 litros " + precioMaximo3litros + " " + precioMinimo3litros)
+						"El precio maximo y minimo de todas las gaseosas menores a 3 litros " + precioMaximo3litros + " / " + precioMinimo3litros)
 	
 
 
@@ -155,4 +162,11 @@ b)La marca y litros del más barato
 c)La cantidad de gaseosas que valen menos de 50.
 d)El promedio del precio de todas las gaseosa.
 f)El precio máximo y el mínimo de todas las gaseosa de menores de 3 litros.
+
+ingreso
+
+coca 2 40
+pepsi 2 35
+narampol 1 30
+cocacola1 3 90
 */
