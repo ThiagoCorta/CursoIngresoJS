@@ -55,7 +55,7 @@ function mostrar()
 
 		
 
-		if(temperatura%2==0)
+		if(temperatura%2==0 && temperatura!=0)
 		{
 			contadorTemperaturasPares=contadorTemperaturasPares+1;
 		}
